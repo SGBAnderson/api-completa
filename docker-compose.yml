@@ -1,0 +1,16 @@
+version: '3.8'
+services: 
+  api-solid-pg:
+    image: bitnami/postgresql
+    ports:
+      # - 3000:3000
+      - 5432:5432
+    volumes:
+      # Sincroniza o código local com o container para desenvolvimento em tempo real
+      # Exceto node_modules, para usar o que foi instalado no container
+      - .:/app
+      - /app/node_modules
+    environment:
+      - POSTGRESQL_USERNAME=plunge-web
+      - POSTGRESQL_PASSWORD=plunge-pass
+      - POSTGRESQL_DATABASE=plunge-db
