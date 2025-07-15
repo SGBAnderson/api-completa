@@ -9,4 +9,4 @@ services:
     environment:
       - POSTGRESQL_USERNAME=postgres
       - POSTGRESQL_PASSWORD=1234
-      - POSTGRESQL_DATABASE=api-carros
+      - POSTGRESQL_DATABASE=api-anderson
